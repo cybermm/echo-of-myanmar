@@ -1,0 +1,5 @@
+primary - 7E0001
+secondary - 111D5E
+light-primary - FF0002 (For Navbar)
+grey - F2F2F2 (For Gallery Bg)
+light-black - 151515(For News Bg)
