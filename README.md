@@ -9,3 +9,16 @@
 # UI Design Link (Figma)
 
 [UI Design Link](https://www.figma.com/file/7xP0JhwGJawM6e02dL8Qzd/HearTheVoiceOfMyanmar?node-id=0%3A1)
+
+# Project Structure
+
+```bash
+.
+├── index.html
+└── src
+    ├── css
+    │   └── app.css
+    ├── imgs
+    └── js
+        └── app.js
+```
