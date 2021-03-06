@@ -3,3 +3,54 @@ secondary - 111D5E
 light-primary - FF0002 (For Navbar)
 grey - F2F2F2 (For Gallery Bg)
 light-black - 151515(For News Bg)
+
+// color ရှင်းလင်းချက်
+သုံးရလွယ်ပြီး bootstrap နဲ့ မရောအောင်လို့ bootstrap ကို scss နဲ့ modified မလုပ်ထားပဲ app.scss file အမည်နဲ့ custom scss file လုပ်ပေးထားတယ်။ 
+
+class အနေနဲ့ ခေါ်သုံးမယ်ဆိုရင် custom ကို ရှေ့ကထားပြီး ခေါ်သုံးရမယ်။ ဥပမာ-
+custom-bg-Primary ဆိုတာက ကိုယ့်ဘာသာကို ထည့်သွင်းထားတဲ့ background primary color ဖြစ်ပါတယ်။
+custom-text-danger ဆိုရင် text danger color ဖြစ်ပါတယ်။ 
+custom key များ
+
+****** bg color ******
+1. custom-bg-primary
+2. custom-bg-secondary
+3. custom-bg-danger
+4. custom-bg-dark
+5. custom-bg-light
+
+****** navbar color ******
+1. custom-navbar-primary
+2. custom-navbar-secondary
+3. custom-navbar-danger
+4. custom-navbar-dark
+5. custom-navbar-light
+
+****** button color ****** (hover chage color effect ပါဝင်ပြီး)
+1. custom-btn-primary
+2. custom-btn-secondary
+3. custom-btn-danger
+4. custom-btn-dark
+5. custom-btn-light
+
+****** text color ******
+1. custom-text-primary
+2. custom-text-secondary
+3. custom-text-danger
+4. custom-text-dark
+5. custom-text-light
+
+****** font size ******
+1. custom-fs-title          (48px, for title )
+2. custom-fs-subtitle       (36px , for navbar and footer logo)  
+3. custom-fs-normal         (24px for normal text)
+4. custom-fs-small          (16px for news)
+
+****** font-weight ****** (400 ကနေ 900 && bolder အထိ , normal, bold, italic, thin က bootstap သုံး)
+1. custom-fw4               (400)
+1. custom-fw5               (500)
+1. custom-fw6               (600)
+1. custom-fw7               (700)
+1. custom-fw8               (800)
+1. custom-fw9               (900)
+1. custom-fwb               (bolder)
