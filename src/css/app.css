@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.custom-bg-pirmary {
+  background-color: #7E0001;
+}
+
+.custom-bg-secondary {
+  background-color: #111D5E;
+}
+
+.custom-bg-danger {
+  background-color: #FF0002;
+}
+
+.custom-bg-dark {
+  background-color: #151515;
+}
+
+.custom-bg-light {
+  background-color: #F2F2F2;
+}
+
+.custom-text-pirmary {
+  color: #7E0001;
+}
+
+.custom-text-secondary {
+  color: #111D5E;
+}
+
+.custom-text-danger {
+  color: #FF0002;
+}
+
+.custom-text-dark {
+  color: #151515;
+}
+
+.custom-text-light {
+  color: #F2F2F2;
+}
+
+.custom-navbar-pirmary {
+  background-color: #7E0001;
+}
+
+.custom-navbar-secondary {
+  background-color: #111D5E;
+}
+
+.custom-navbar-danger {
+  background-color: #FF0002;
+}
+
+.custom-navbar-dark {
+  background-color: #151515;
+}
+
+.custom-navbar-light {
+  background-color: #F2F2F2;
+}
+
+.custom-btn-pirmary {
+  background-color: #7E0001;
+}
+
+.custom-btn-secondary {
+  background-color: #111D5E;
+}
+
+.custom-btn-danger {
+  background-color: #FF0002;
+}
+
+.custom-btn-dark {
+  background-color: #151515;
+}
+
+.custom-btn-light {
+  background-color: #F2F2F2;
+}
+
+.custom-fw4 {
+  font-weight: 400;
+}
+
+.custom-fw5 {
+  font-weight: 500;
+}
+
+.custom-fw6 {
+  font-weight: 600;
+}
+
+.custom-fw7 {
+  font-weight: 700;
+}
+
+.custom-fw8 {
+  font-weight: 800;
+}
+
+.custom-fw9 {
+  font-weight: 900;
+}
+
+.custom-fwb {
+  font-weight: bolder;
+}
+
+.custom-fs-title {
+  font-size: 34px;
+}
+
+.custom-fs-subtitle {
+  font-size: 26px;
+}
+
+.custom-fs-normal {
+  font-size: 18px;
+}
+
+.custom-fs-small {
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=app.css.map */
