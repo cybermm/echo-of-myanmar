@@ -1,7 +1,5 @@
 # UI for Echo Of Myanmar Project
 
-// scss ရှင်းလင်းချက် ကို color.txt တွင် သေချာဖတ်ပါ
-
 ("ပြည်မြန်မာ၏ပဲ့တင်သံ" Website အတွက် UI Project ဖြစ်ပါသည်။)
 
 # To Do List
@@ -24,3 +22,18 @@
     └── js
         └── app.js
 ```
+
+# Notices
+
+```html
+<!-- Don't base on large screen -->
+<nav class="expand-lg"></nav>
+
+<!-- Base on medium size screen -->
+<nav class="expand-md"></nav>
+```
+
+# Extra Reading
+
+SCSS ရှင်းလင်းချက် ကို `color.txt` တွင် ဖတ်ပါ။
+
