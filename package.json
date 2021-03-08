@@ -7,8 +7,8 @@
   "license": "MIT",
   "private": true,
   "scripts":{
-    "build":"sass sass:css",
-    "watch":"sass --watch sass:css"
+    "build":"sass sec/scss:src/css",
+    "watch":"sass --watch src/scss:src/css"
    },
   "dependencies": {
     "bootstrap": "^5.0.0-beta2",
