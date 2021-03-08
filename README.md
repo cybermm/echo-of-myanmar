@@ -14,6 +14,7 @@
 
  - Fork this project to your personal repo.
  - Clone the forked repo to your local machine via `git clone <URI>`
+ - In your terminal `npm install` command to install `node_modules`
  - Code in your local project 
  - Don't miss to latest commit 
  - When you pushed to the repo you must pull request to merge your code to main project
