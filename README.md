@@ -19,6 +19,16 @@
  - Don't miss to latest commit 
  - When you pushed to the repo you must pull request to merge your code to main project
 
+# Sass complications
+
+```bash
+# install sass as global
+npm install -g sass
+# compile scss to css
+npm run build
+# watch and compile scss to css
+npm run watch
+```
 
 # Project Structure
 
