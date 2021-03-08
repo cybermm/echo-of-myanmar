@@ -6,6 +6,10 @@
   "author": "minkgkyaw <mwebeducationchannel@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts":{
+    "build":"sass sass:css",
+    "watch":"sass --watch sass:css"
+   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta2",
     "sass": "^1.32.8"
