@@ -45,9 +45,9 @@ npm run watch
 
 # Notices
 
-```html
-<!-- Don't base on large screen -->
-<nav class="expand-lg"></nav>
+```diff
+-- Don't base on large screen 
++ <nav class="expand-lg"></nav>
 
 <!-- Base on medium size screen -->
 <nav class="expand-md"></nav>
