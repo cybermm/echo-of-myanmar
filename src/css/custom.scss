@@ -1,0 +1,17 @@
+$danger: #7E0001;
+$info: #111D5E;
+
+$custom-colors: (
+  "light-danger": #FF0002,
+  "white": #ffffff
+);
+
+
+$theme-colors: (
+  "danger": $danger,
+  "info": $info
+);
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
