@@ -8,19 +8,16 @@
       class="row justify-content-center align-items-center vh-100 text-center"
       >
       <div class="col-12 col-lg-9 col-xl-8">
-        <h1>Help Detainees From Military Coup</h1>
+        <h1>@lang('home.save_us')</h1>
         <p class="mt-3">
-          Echo of Myanmar is a non-profit organization founded by a group of
-          local and international students from Australia, Korea, UK, US and
-          Japan. Our team intends to become the medium between the detainees
-          and the lawyers.
+          @lang('home.about_us_content')
         </p>
         <div class="mt-4">
           <button class="btn btn-danger rounded-pill fw-bold">
-            View News
+            @lang('home.view_news')
           </button>
           <button class="btn btn-outline-white rounded-pill ms-3">
-            Contact Us
+            @lang('home.contact_us')
           </button>
         </div>
         <div class="social-icons">
@@ -45,7 +42,9 @@
       <div class="row h-100 align-items-center">
         <div class="col-12">
           <div class="col-12 text-center mb-3">
-            <h3 class="fw-bold">About Us</h3>
+            <h3 class="fw-bold">
+              @lang('home.about_us_title')
+            </h3>
             <span class="underline"></span>
           </div>
           <div class="row align-items-center mt-4">
@@ -58,15 +57,9 @@
               />
             </div>
             <div class="col-12 col-lg-6 mt-3 mt-lg-0">
-              <p>
-                Echo of Myanmar is a non-profit organization founded by a
-                group of local and international students from Australia,
-                Korea, UK, US and Japan. The main purpose of this organization
-                is to support the front-liners, who demonstrated extraordinary
-                depths of commitment in the fight for justice and DEMONCRACY
-                in Myanmar. Our team intends to become the medium between the
-                detainees and the lawyers.
-              </p>
+          <p>
+            @lang('home.about_us_content')
+          </p>
             </div>
           </div>
         </div>
@@ -74,6 +67,24 @@
     </div>
   </section>
   
+    <!-- Main Purpose -->
+  <section  class="bg-red  text-white py-3 text-center">
+    <div class="container">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-12 col-md-11 col-lg-8 text-center ">
+          <h3>
+            @lang('home.purpose_title')
+          </h3>
+          <span class="underline"></span>
+          <p class="mt-4">
+            @lang('home.purpose_content')
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
 <!-- Gallery -->
   <section id="gallery" class="py-3 py-md-5">
     <div class="container py-3">
@@ -130,13 +141,12 @@
     <div class="container">
       <div class="row h-100 justify-content-center align-items-center">
         <div class="col-12 col-md-11 col-lg-8 text-center">
-          <h3>What We Do</h3>
+          <h3>
+            @lang('home.what_we_do_title')
+          </h3>
           <span class="underline"></span>
           <p class="mt-4">
-            Echo of Myanmar intends to reach out to those who are in need for
-            the prompt actions. If there is anyone who is detained with no
-            support to receive legal advice, please contact us and we will
-            connect you with one of out volunteer lawyers.
+            @lang('home.what_we_do_content')
           </p>
         </div>
       </div>

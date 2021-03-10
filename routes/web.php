@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
+  app()->setLocale('mmr');
     return view('index');
 });
 Route::get('/news', function () {
