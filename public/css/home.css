@@ -1,0 +1,6 @@
+#home, #breadcrumb {
+  color: #fff;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
+  url(../imgs/static/bg1.jpg) no-repeat center center/cover;
+}
