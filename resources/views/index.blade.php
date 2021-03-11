@@ -8,7 +8,7 @@
       class="row justify-content-center align-items-center vh-100 text-center"
       >
       <div class="col-12 col-lg-9 col-xl-8">
-        <h1>@lang('home.save_us')</h1>
+        <h1 class="mt-5 line-height">@lang('home.save_us')</h1>
         <p class="mt-3">
           @lang('home.about_us_content')
         </p>
