@@ -36,7 +36,7 @@
                       <th>Name</th>
                       <th>Email</th>
                       <th>Role</th>
-                   <th>Manage User</th>
+                      <th>Manage User</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -58,19 +58,19 @@
                             aria-haspopup="true">
                             Edit Role
                           </button>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{
-                         route('admin.role.update',[
-                        'id'=>$user->id,
-                        'role'=>'admin'
-                        ])
-                           }}">Admin</a>
+                              route('admin.role.update',[
+                              'id'=>$user->id,
+                              'role'=>'admin'
+                              ])
+                              }}">Admin</a>
                             <a class="dropdown-item" href="{{
-                         route('admin.role.update',[
-                        'id'=>$user->id,
-                        'role'=>'user'
-                        ])
-                           }}">User</a>
+                              route('admin.role.update',[
+                              'id'=>$user->id,
+                              'role'=>'user'
+                              ])
+                              }}">User</a>
                           </div>
                         </div>
 
@@ -79,13 +79,13 @@
                     @empty
                     <tr>
                       <td colspan="4" class="text-center">
-                      User Not Found
+                        User Not Found
                       </td>
                     </tr>
                     @endforelse
                   </tbody>
                 </table>
-               </div>
+              </div>
             </div>
           </div>
         </div>

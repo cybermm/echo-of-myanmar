@@ -74,7 +74,7 @@ class RoleController extends Controller
         $user = User::findOrFail($id)->update([
           'role'=>$role
           ]);
-          return back();
+          return back()->with('status','User role updated successfully.');
     }
 
     /**
