@@ -20,20 +20,21 @@
   <div id="app">
     @include('layouts.admin.sidebar')
     <div id="main">
+      <!-- Menu Toggle Button -->
+      <header class="mb-3">
+        <a href="#" class="burger-btn d-block d-xl-none">
+          <i class="bi bi-justify fs-3"></i>
+        </a>
+      </header>
+
       @yield('content')
+
       <footer>
-        <div class="footer clearfix mb-0 text-muted">
-          <div class="float-start">
+        <div class="footer clearfix mb-0 text-muted text-center">
+          <div>
             <p>
-              2021 &copy; Echo Of Myanmar
-            </p>
-          </div>
-          <div class="float-end">
-            <p>
-              Developed by
-              ❤️
-              with <a
-                href="https://www.facebook.com/aungmyatmoe834">Aung Myat Moe</a>
+              Developed by ❤️ with <a
+                href="http://facebook.com">Aung Myat Moe</a>
             </p>
           </div>
         </div>
@@ -46,7 +47,6 @@
   <script src="{{ asset('js/app.js')}}"></script>
   <script src="{{ asset('admin/vendors/apexcharts/apexcharts.js')}}"></script>
   <script src="{{ asset('admin/js/pages/dashboard.js')}}"></script>
-
 
   <!--  Main Script -->
   <script src="{{ asset('admin/js/main.js')}}"></script>
