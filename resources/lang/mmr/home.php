@@ -1,7 +1,7 @@
 <?php
 
 return [
-  'save_us' => 'အဖမ်းခံရသူများကိုကူညီပေးပါသည်။',
+  'save_us' => 'Help Detainees From Military Coup',
   'view_news' => 'View News',
   'contact_us' => 'Contact Us',
   'about_us_title' => 'About Us',

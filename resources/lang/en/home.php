@@ -16,6 +16,4 @@ become the medium between the detainees and the lawyers.
   'what_we_do_content'=>'Echo of Myanmar intends to reach out to those who are in need for the prompt actions. If there is anyone who is detained with no support to receive legal advice, please contact us and we will connect you with one of out volunteer lawyers.',
   'see_more'=>'See More'
 
-
-
 ];

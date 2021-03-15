@@ -1,8 +1,9 @@
 @extends('layouts.user.app')
 @section('content')
-
 <!-- Home -->
+
 <section id="home">
+
   <div class="container vh-100">
     <div
       class="row justify-content-center align-items-center vh-100 text-center"
@@ -37,38 +38,38 @@
 </section>
 
 <!-- About -->
-  <section id="about">
-    <div class="container">
-      <div class="row h-100 align-items-center">
-        <div class="col-12">
-          <div class="col-12 text-center mb-3">
-            <h3 class="fw-bold">
-              @lang('home.about_us_title')
-            </h3>
-            <span class="underline"></span>
+<section id="about">
+  <div class="container">
+    <div class="row h-100 align-items-center">
+      <div class="col-12">
+        <div class="col-12 text-center mb-3">
+          <h3 class="fw-bold">
+            @lang('home.about_us_title')
+          </h3>
+          <span class="underline"></span>
+        </div>
+        <div class="row align-items-center mt-4">
+          <div class="col-12 col-lg-6">
+            <img
+            src="{{ asset('imgs/static/bg2.png')}}"
+            alt=""
+            width="550px"
+            height="450px"
+            />
           </div>
-          <div class="row align-items-center mt-4">
-            <div class="col-12 col-lg-6">
-              <img
-              src="{{ asset('imgs/static/bg2.png')}}"
-              alt=""
-              width="550px"
-              height="450px"
-              />
-            </div>
-            <div class="col-12 col-lg-6 mt-3 mt-lg-0">
-          <p>
-            @lang('home.about_us_content')
-          </p>
-            </div>
+          <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+            <p>
+              @lang('home.about_us_content')
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  
-    <!-- Main Purpose -->
-  <section  class="bg-red  text-white py-3 text-center">
+  </div>
+</section>
+
+<!-- Main Purpose -->
+<!--  <section  class="bg-red  text-white py-3 text-center">
     <div class="container">
       <div class="row h-100 justify-content-center align-items-center">
         <div class="col-12 col-md-11 col-lg-8 text-center ">
@@ -83,76 +84,76 @@
       </div>
     </div>
   </section>
-  
+-->
 
 <!-- Gallery -->
-  <section id="gallery" class="py-3 py-md-5">
-    <div class="container py-3">
-      <div class="row align-items-center">
-        <div class="col-12">
-          <div class="col-12 text-center">
-            <h3>Gallery</h3>
-            <span class="underline"></span>
-          </div>
-          <div class="row mt-3">
-            <div class="col-12 col-md-6 my-3">
-              <img
-              src="{{ asset('imgs/static/gallery1.jpg')}}"
-              width="100%"
-              height="400px"
-              alt=""
-              />
-            </div>
-            <div class="col-12 col-md-6 my-3">
-              <img
-              src="{{ asset('imgs/static/gallery2.jpg')}}"
-              width="100%"
-              height="400px"
-              alt=""
-              />
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 col-xl-4 my-3">
-              <img
-              src="{{ asset('imgs/static/gallery3.jpg')}}"
-              width="100%"
-              height="400px"
-              alt=""
-              />
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 col-xl-4 my-3">
-              <img
-              src="{{ asset('imgs/static/gallery4.jpg')}}"
-              width="100%"
-              height="400px"
-              alt=""
-              />
-            </div>
-          </div>
-          <div class="col-12 text-center mt-4">
-            <button class="btn btn-danger rounded-pill">View More</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-<!-- What We Do -->
-  <section id="whatwedo">
-    <div class="container">
-      <div class="row h-100 justify-content-center align-items-center">
-        <div class="col-12 col-md-11 col-lg-8 text-center">
-          <h3>
-            @lang('home.what_we_do_title')
-          </h3>
+<section id="gallery" class="py-3 py-md-5">
+  <div class="container py-3">
+    <div class="row align-items-center">
+      <div class="col-12">
+        <div class="col-12 text-center">
+          <h3>Gallery</h3>
           <span class="underline"></span>
-          <p class="mt-4">
-            @lang('home.what_we_do_content')
-          </p>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 col-md-6 my-3">
+            <img
+            src="{{ asset('imgs/static/gallery1.jpg')}}"
+            width="100%"
+            height="400px"
+            alt=""
+            />
+          </div>
+          <div class="col-12 col-md-6 my-3">
+            <img
+            src="{{ asset('imgs/static/gallery2.jpg')}}"
+            width="100%"
+            height="400px"
+            alt=""
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-4 my-3">
+            <img
+            src="{{ asset('imgs/static/gallery3.jpg')}}"
+            width="100%"
+            height="400px"
+            alt=""
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-4 my-3">
+            <img
+            src="{{ asset('imgs/static/gallery4.jpg')}}"
+            width="100%"
+            height="400px"
+            alt=""
+            />
+          </div>
+        </div>
+        <div class="col-12 text-center mt-4">
+          <button class="btn btn-danger rounded-pill">View More</button>
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
+
+<!-- What We Do -->
+<section id="whatwedo">
+  <div class="container">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-12 col-md-11 col-lg-8 text-center">
+        <h3>
+          @lang('home.what_we_do_title')
+        </h3>
+        <span class="underline"></span>
+        <p class="mt-4">
+          @lang('home.what_we_do_content')
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- News -->
 <section id="news" class="py-3 py-md-5">
   <div class="container py-3">

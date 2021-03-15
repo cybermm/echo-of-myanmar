@@ -1,18 +1,26 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-
-Route::get('/', function () {
-  app()->setLocale('mmr');
-  return view('index');
-});
+use App\Http\Controllers\LocaleController;
 
 Auth::routes();
 
-// Admin Route
-Route::group(['prefix' => 'admin', 'namespace' => 'admin','middleware'=>'role'], function () {
-
-  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+// Public UserRoute
+Route::get('/', function () {
+ return view('index');
 });
+
+// Language Controller
+Route::get('/{locale}', [LocaleController::class, 'setLocale'])->name('locale');
+
+
+// Admin Route Group
+Route::group(
+  [
+    'prefix' => 'admin', 'namespace' => 'admin', 'middleware' => 'role',
+    'as' => 'admin.'
+  ], function () {
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+  });

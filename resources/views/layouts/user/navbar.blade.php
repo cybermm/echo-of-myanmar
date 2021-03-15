@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold py-0" href="#">
+    <a class="navbar-brand fw-bold py-0" href="/">
       <img
       src="{{ asset('imgs/static/logo.jpg')}}"
       alt="logo"
@@ -77,11 +77,11 @@
         <!-- Locale Language -->
         <div class="dropdown">
           <button class="btn btn-outline-danger btn-language dropdown-toggle" id="language" data-bs-toggle="dropdown" aria-expanded="false" type="submit">
-            English
+            Language
           </button>
           <ul class="dropdown-menu" aria-labelledby="language">
-            <li><a class="dropdown-item" href="#">မြန်မာ</a></li>
-            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="{{ route('locale','mmr')}}">မြန်မာ</a></li>
+            <li><a class="dropdown-item" href="{{ route('locale','en')}}">English</a></li>
 
           </ul>
         </div>
