@@ -20,12 +20,15 @@ Route::group(
   [
     'prefix' => 'admin',
     'middleware' => 'role',
+    'namespace' => 'admin',
     'as' => 'admin.'
   ], function () {
 
+    // Admin Home
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    
-    Route::get('/role',[RoleController::class,'index'])->name('role.index');
-    Route::get('/role/{id}/{role}',[RoleController::class,'update'])->name('role.update');
+
+    // Role Management
+    Route::get('/role', [RoleController::class, 'index'])->name('role.index');
+    Route::get('/role/{id}/{role}', [RoleController::class, 'update'])->name('role.update');
 
   });

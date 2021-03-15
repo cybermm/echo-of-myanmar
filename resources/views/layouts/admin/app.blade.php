@@ -59,7 +59,7 @@
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                   <li>
                     <h6 class="dropdown-header">
-                     Mingalarpar! {{ auth()->user()->name}}
+                      Mingalarpar! {{ auth()->user()->name}}
 
                     </h6>
                   </li>
@@ -72,20 +72,20 @@
                   </li>
                   @if(Route::has('logout'))
                   <li><a class="dropdown-item" href="{{ route('logout')}}"
-                  onclick="event.preventDefault();
-            document.querySelector('#logout-form').submit();
-            "><i
-                    class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
-                    @endif
+                    onclick="event.preventDefault();
+                    document.querySelector('#logout-form').submit();
+                    "><i
+                      class="icon-mid bi bi-box-arrow-left me-2"></i> Logout</a></li>
+                  @endif
                 </ul>
               </div>
             </div>
           </div>
         </nav>
         <!-- Logout Form -->
-<form action="{{ route('logout') }}" id="logout-form" method="post">
-  @csrf
-</form>
+        <form action="{{ route('logout') }}" id="logout-form" method="post">
+          @csrf
+        </form>
       </header>
       <div id="main-content">
 
