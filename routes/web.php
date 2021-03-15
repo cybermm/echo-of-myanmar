@@ -25,6 +25,7 @@ Route::group(
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     
-    Route::resource('/role',RoleController::class);
+    Route::get('/role',[RoleController::class,'index'])->name('role.index');
+    Route::get('/role/{id}/{role}',[RoleController::class,'update'])->name('role.update');
 
   });

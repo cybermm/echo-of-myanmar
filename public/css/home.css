@@ -12,3 +12,7 @@
 .line-height{
   line-height:1.8;
 }
+
+.select-none{
+  user-select: none;
+}

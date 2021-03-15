@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\User;
 class RoleController extends Controller
 {
     /**
@@ -14,7 +14,9 @@ class RoleController extends Controller
      */
     public function index()
     {
-        return view('admin.role.index');
+      // Show all users
+      $users = User::orderBy('id','desc')->paginate(5);
+       return view('admin.role.index',compact('users'));
     }
 
     /**
@@ -57,7 +59,7 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -67,9 +69,12 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id,$role)
     {
-        //
+        $user = User::findOrFail($id)->update([
+          'role'=>$role
+          ]);
+          return back();
     }
 
     /**

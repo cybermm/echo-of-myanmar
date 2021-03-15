@@ -15,6 +15,11 @@
   <link rel="stylesheet" href="{{ asset('admin/vendors/bootstrap-icons/bootstrap-icons.css')}}">
   <link rel="stylesheet" href="{{ asset('admin/css/app.css')}}">
   <link rel="shortcut icon" href="{{ asset('admin/images/favicon.svg')}}" type="image/x-icon">
+    <script src="{{ asset('js/eruda.js')}}"></script>
+
+  <script>
+    eruda.init();
+  </script>
 </head>
 <body>
   <div id="app">
@@ -22,7 +27,7 @@
     <div id="main">
       <!-- Menu Toggle Button -->
       <header class="mb-3">
-        <a href="#" class="burger-btn d-block d-xl-none">
+        <a href="" class="burger-btn d-block d-xl-none select-none" onclick="event.preventDefault()">
           <i class="bi bi-justify fs-3"></i>
         </a>
       </header>
@@ -50,6 +55,8 @@
 
   <!--  Main Script -->
   <script src="{{ asset('admin/js/main.js')}}"></script>
+  
+  @stack('script')
 </body>
 
 </html>
