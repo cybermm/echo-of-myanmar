@@ -23,10 +23,49 @@
         </li>
         
         <li class="sidebar-item ">
-          <a href="{{ route('admin.role.index')}}" class='sidebar-link'>
-            <i class="bi bi-person"></i>
+          <a href="{{ route('admin.home')}}" class='sidebar-link'>
+            <i class="bi bi-pen-fill"></i>
+            <span>Manage Posts</span>
+          </a>
+        </li>
+
+        <!--<li class="sidebar-item  has-sub">-->
+        <!--  <a href="#" class='sidebar-link'>-->
+        <!--    <i class="bi bi-pen-fill"></i>-->
+        <!--    <span>Manage Posts</span>-->
+        <!--  </a>-->
+        <!--  <ul class="submenu ">-->
+        <!--    <li class="submenu-item ">-->
+        <!--      <a href="component-alert.html">Alert</a>-->
+        <!--    </li>-->
+        <!--  </ul>-->
+        <!--</li>-->
+
+
+        <li class="sidebar-item ">
+          <a href="{{route('admin.role.index')}}" class="sidebar-link">
+            <i class="bi bi-person-fill"></i>
             <span>Manage Role</span>
           </a>
+        </li>
+
+        <li class="sidebar-item  has-sub">
+          <a href="" class='sidebar-link'>
+            <i class="bi bi-gear-fill"></i>
+            <span>
+              Settings
+            </span>
+          </a>
+          <ul class="submenu ">
+            <li class="submenu-item ">
+              <a href="{{ route('admin.profile.show',auth()->id())}}">
+                <i class="bi bi-person"></i>
+                <span>
+                  My Profile
+                </span>
+              </a>
+            </li>
+          </ul>
         </li>
 
       </ul>

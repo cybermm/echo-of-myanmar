@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\ProfileController;
 
 Auth::routes();
 
@@ -20,7 +21,6 @@ Route::group(
   [
     'prefix' => 'admin',
     'middleware' => 'role',
-    'namespace' => 'admin',
     'as' => 'admin.'
   ], function () {
 
@@ -30,5 +30,8 @@ Route::group(
     // Role Management
     Route::get('/role', [RoleController::class, 'index'])->name('role.index');
     Route::get('/role/{id}/{role}', [RoleController::class, 'update'])->name('role.update');
+    
+    //  Profile Management
+    Route::resource('/profile',ProfileController::class);
 
   });

@@ -16,8 +16,11 @@
   <link rel="stylesheet" href="{{ asset('admin/vendors/bootstrap-icons/bootstrap-icons.css')}}">
   <link rel="stylesheet" href="{{ asset('admin/css/app.css')}}">
   <link rel="shortcut icon" href="{{ asset('admin/images/favicon.svg')}}" type="image/x-icon">
+  <!-- Data Table CSS -->
+  <link rel="stylesheet" href="{{ asset('admin/vendors/simple-datatables/style.css') }}">
+  
+  <!-- Eruda JS -->
   <script src="{{ asset('js/eruda.js')}}"></script>
-
   <script>
     eruda.init();
   </script>
@@ -51,7 +54,7 @@
                     </div>
                     <div class="user-img d-flex align-items-center">
                       <div class="avatar avatar-md">
-                        <img src="assets/images/faces/1.jpg">
+                        <img src="{{ asset('admin/images/faces/2.jpg')}}">
                       </div>
                     </div>
                   </div>
@@ -97,12 +100,17 @@
     </div>
   </div>
 
-
-  <!-- Core Script -->
-  <script src="{{ asset('admin/vendors/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
+<!-- Bootstrap JS -->
   <script src="{{ asset('js/app.js')}}"></script>
+
+  <!-- Extra Script -->
+  <script src="{{ asset('admin/vendors/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
   <script src="{{ asset('admin/vendors/apexcharts/apexcharts.js')}}"></script>
   <script src="{{ asset('admin/js/pages/dashboard.js')}}"></script>
+  <!-- Data Table -->
+  <script src="{{ asset('admin/vendors/simple-datatables/simple-datatables.js')}}">
+  </script>
+
 
   <!--  Main Script -->
   <script src="{{ asset('admin/js/main.js')}}"></script>

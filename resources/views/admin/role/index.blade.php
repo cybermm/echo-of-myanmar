@@ -30,7 +30,7 @@
             <div class="card-body">
               <!-- Table with outer spacing -->
               <div class="table-responsive">
-                <table class="table table-lg">
+                <table id="role-table" class="table table-lg" >
                   <thead>
                     <tr>
                       <th>Name</th>
@@ -96,3 +96,11 @@
 </div>
 
 @endsection
+@push('script')
+<script>
+  // Simple Datatable
+  let role_table = document.querySelector('#role-table');
+  let dataTable = new simpleDatatables.DataTable(role_table);
+</script>
+
+@endpush

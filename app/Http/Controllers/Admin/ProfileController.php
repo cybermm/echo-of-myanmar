@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
-class RoleController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-      // Show all users
-      $users = User::orderBy('id','desc')->get();
-       return view('admin.role.index',compact('users'));
+        //
     }
 
     /**
@@ -46,9 +44,9 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $profile)
     {
-        //
+        return view('admin.profile.edit')->with('profile',$profile);
     }
 
     /**
@@ -59,7 +57,7 @@ class RoleController extends Controller
      */
     public function edit($id)
     {
-        
+        //
     }
 
     /**
@@ -69,12 +67,9 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id,$role)
+    public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id)->update([
-          'role'=>$role
-          ]);
-          return back()->with('status','User role updated successfully.');
+        //
     }
 
     /**

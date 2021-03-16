@@ -4,7 +4,14 @@
 <div class="page-heading">
   <h3>Dashboard</h3>
 </div>
+<div class="my-3 d-flex">
+  <!-- Create Post Action  -->
+  <a class="btn btn-outline-primary my-3 ms-auto">
+  <i class="bi bi-pen"></i>
+  Create Post
+</a>
 
+</div>
 <div class="page-content">
   <section class="row">
     <div class="col-12 col-lg-9">
