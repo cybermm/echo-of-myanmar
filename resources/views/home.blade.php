@@ -213,3 +213,17 @@
 </div>
 
 @endsection
+
+<!--  Toast For Flash Sesion -->
+@if(Session::has('status'))
+@push('script')
+  <script>
+    Toastify({
+      text: "{{ Session::get('status')}}",
+      duration: 3000,
+      gravity:"top",
+      position: "center",
+    }).showToast();
+  </script>
+@endpush
+@endif

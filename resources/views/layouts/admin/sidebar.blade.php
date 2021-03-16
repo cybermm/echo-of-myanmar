@@ -3,7 +3,7 @@
     <div class="sidebar-header">
       <div class="d-flex justify-content-between">
         <div class="logo">
-          <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a>
+          <img src="{{ asset('admin/images/logo/logo.png')}}" alt="Logo" >
         </div>
         <div class="toggler">
           <a href="" class="sidebar-hide d-xl-none d-block" onclick="event.preventDefault()"><i class="bi bi-x bi-middle"></i></a>
@@ -21,7 +21,7 @@
             <span>Dashboard</span>
           </a>
         </li>
-        
+
         <li class="sidebar-item ">
           <a href="{{ route('admin.home')}}" class='sidebar-link'>
             <i class="bi bi-pen-fill"></i>
@@ -49,27 +49,34 @@
           </a>
         </li>
 
-        <li class="sidebar-item  has-sub">
-          <a href="" class='sidebar-link'>
-            <i class="bi bi-gear-fill"></i>
-            <span>
-              Settings
-            </span>
-          </a>
-          <ul class="submenu ">
-            <li class="submenu-item ">
-              <a href="{{ route('admin.profile.show',auth()->id())}}">
-                <i class="bi bi-person"></i>
-                <span>
-                  My Profile
-                </span>
-              </a>
-            </li>
-          </ul>
+        <li class="sidebar-title">
+          Settings
         </li>
+        <li class="sidebar-item ">
+          <a href="{{route('admin.profile.edit',auth()->id())}}" class="sidebar-link">
+            <i class="bi bi-person-fill"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+                          @if(Route::has('logout'))
 
+        <li class="sidebar-item ">
+          <a href="{{ route('logout')}}" class="sidebar-link" onclick="event.preventDefault();
+                    document.querySelector('#logout-form').submit();
+                    ">
+<i
+                      class="icon-mid bi bi-box-arrow-left me-2"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+@endif
       </ul>
     </div>
     <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
   </div>
 </div>
+
+<!-- Logout Form -->
+<form action="{{ route('logout') }}" id="logout-form" method="post">
+  @csrf
+</form>

@@ -32,6 +32,7 @@ Route::group(
     Route::get('/role/{id}/{role}', [RoleController::class, 'update'])->name('role.update');
     
     //  Profile Management
-    Route::resource('/profile',ProfileController::class);
+    Route::get('/profile/{profile}',[ProfileController::class,'edit'])->name('profile.edit');
+    Route::post('/profile/{profile}',[ProfileController::class,'update'])->name('profile.update');
 
   });

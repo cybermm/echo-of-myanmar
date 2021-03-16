@@ -28,6 +28,7 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => bcrypt(123123123),
             'role'=>'admin',
+            'image'=>'default.jpg',
             'remember_token' => Str::random(10),
         ];
     }

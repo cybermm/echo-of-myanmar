@@ -18,7 +18,9 @@
   <link rel="shortcut icon" href="{{ asset('admin/images/favicon.svg')}}" type="image/x-icon">
   <!-- Data Table CSS -->
   <link rel="stylesheet" href="{{ asset('admin/vendors/simple-datatables/style.css') }}">
-  
+  <!-- Toastify -->
+  <link rel="stylesheet" href="{{ asset('admin/vendors/toastify/toastify.css') }}">
+
   <!-- Eruda JS -->
   <script src="{{ asset('js/eruda.js')}}"></script>
   <script>
@@ -54,25 +56,26 @@
                     </div>
                     <div class="user-img d-flex align-items-center">
                       <div class="avatar avatar-md">
-                        <img src="{{ asset('admin/images/faces/2.jpg')}}">
+                        <img src="{{asset('admin/images/faces/'.auth()->user()->image)}}">
                       </div>
                     </div>
                   </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                   <li>
-                    <h6 class="dropdown-header">
-                      Mingalarpar! {{ auth()->user()->name}}
-
-                    </h6>
-                  </li>
-                  <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-person me-2"></i> My
-                    Profile</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-gear me-2"></i>
-                    Settings</a></li>
+                    <a class="dropdown-item" href="{{ route('admin.home')}}"><i class="icon-mid bi bi-pen-fill me-2 text-primary"></i> New Post</a></li>
                   <li>
-                    <hr class="dropdown-divider">
-                  </li>
+                    <a class="dropdown-item" href="{{ route('admin.home')}}"><i class="icon-mid bi bi-grid me-2"></i> Dashboard</a></li>
+                    <li class="divider divider-left-center">
+                      <div class="divider-text">
+                      <i class="bi bi-gear-fill"></i>
+                      <span>
+                        Settings
+                      </span>
+                      </div>
+                    </li>
+                  <li>
+                    <a class="dropdown-item" href="{{ route('admin.profile.edit',auth()->id())}}"><i class="icon-mid bi bi-person me-2"></i> Profile</a></li>
                   @if(Route::has('logout'))
                   <li><a class="dropdown-item" href="{{ route('logout')}}"
                     onclick="event.preventDefault();
@@ -100,7 +103,7 @@
     </div>
   </div>
 
-<!-- Bootstrap JS -->
+  <!-- Bootstrap JS -->
   <script src="{{ asset('js/app.js')}}"></script>
 
   <!-- Extra Script -->
@@ -110,11 +113,12 @@
   <!-- Data Table -->
   <script src="{{ asset('admin/vendors/simple-datatables/simple-datatables.js')}}">
   </script>
+  <script src="{{ asset('admin/vendors/toastify/toastify.js')}}">
+  </script>
 
 
   <!--  Main Script -->
   <script src="{{ asset('admin/js/main.js')}}"></script>
-
   @stack('script')
 </body>
 
