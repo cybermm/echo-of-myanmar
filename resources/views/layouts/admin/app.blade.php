@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="{{ asset('admin/vendors/iconly/bold.css')}}">
 
   <link rel="stylesheet" href="{{ asset('admin/vendors/perfect-scrollbar/perfect-scrollbar.css')}}">
+  
   <link rel="stylesheet" href="{{ asset('admin/vendors/bootstrap-icons/bootstrap-icons.css')}}">
+  
   <link rel="stylesheet" href="{{ asset('admin/css/app.css')}}">
   <link rel="shortcut icon" href="{{ asset('admin/images/favicon.svg')}}" type="image/x-icon">
   <!-- Data Table CSS -->
@@ -66,14 +68,14 @@
                     <a class="dropdown-item" href="{{ route('admin.home')}}"><i class="icon-mid bi bi-pen-fill me-2 text-primary"></i> New Post</a></li>
                   <li>
                     <a class="dropdown-item" href="{{ route('admin.home')}}"><i class="icon-mid bi bi-grid me-2"></i> Dashboard</a></li>
-                    <li class="divider divider-left-center">
-                      <div class="divider-text">
+                  <li class="divider divider-left-center">
+                    <div class="divider-text">
                       <i class="bi bi-gear-fill"></i>
                       <span>
                         Settings
                       </span>
-                      </div>
-                    </li>
+                    </div>
+                  </li>
                   <li>
                     <a class="dropdown-item" href="{{ route('admin.profile.edit',auth()->id())}}"><i class="icon-mid bi bi-person me-2"></i> Profile</a></li>
                   @if(Route::has('logout'))
@@ -119,6 +121,7 @@
 
   <!--  Main Script -->
   <script src="{{ asset('admin/js/main.js')}}"></script>
+  
   @stack('script')
 </body>
 

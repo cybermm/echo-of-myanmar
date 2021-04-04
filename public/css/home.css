@@ -2,7 +2,7 @@
   color: #fff;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)),
-  url(../imgs/static/bg1.jpg) no-repeat center center/cover;
+  url('../imgs/static/bg1.jpg') no-repeat center center/cover;
 }
 
 .bg-red{
@@ -14,5 +14,8 @@
 }
 
 .select-none{
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }

@@ -33,6 +33,6 @@ Route::group(
     
     //  Profile Management
     Route::get('/profile/{profile}',[ProfileController::class,'edit'])->name('profile.edit');
-    Route::post('/profile/{profile}',[ProfileController::class,'update'])->name('profile.update');
+    Route::put('/profile/{profile}',[ProfileController::class,'update'])->name('profile.update');
 
   });

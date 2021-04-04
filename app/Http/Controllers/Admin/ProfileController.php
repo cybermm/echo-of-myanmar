@@ -64,7 +64,7 @@ class ProfileController extends Controller
 
     // Old Hash Password
     $old_hash_password = $profile->password;
-
+    
     // Old Image
     $old_image_name = $profile->image;
 
