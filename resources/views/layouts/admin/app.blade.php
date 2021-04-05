@@ -65,7 +65,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
                   <li>
-                    <a class="dropdown-item" href="{{ route('admin.home')}}"><i class="icon-mid bi bi-pen-fill me-2 text-primary"></i> New Post</a></li>
+                    <a class="dropdown-item" href="{{ route('admin.post.create')}}"><i class="icon-mid bi bi-plus-circle-fill me-2 text-primary"></i> New Post</a></li>
                   <li>
                     <a class="dropdown-item" href="{{ route('admin.home')}}"><i class="icon-mid bi bi-grid me-2"></i> Dashboard</a></li>
                   <li class="divider divider-left-center">

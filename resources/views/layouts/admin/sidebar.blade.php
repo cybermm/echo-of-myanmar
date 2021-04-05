@@ -3,8 +3,8 @@
     <div class="sidebar-header">
       <div class="d-flex justify-content-between">
         <div class="logo">
-          <img src="{{ asset('admin/images/logo/logo.png')}}" alt="Logo" >
-        </div>
+<!--          <img src="{{ asset('admin/images/logo/logo.png')}}" alt="Logo" >
+-->        </div>
         <div class="toggler">
           <a href="" class="sidebar-hide d-xl-none d-block" onclick="event.preventDefault()"><i class="bi bi-x bi-middle"></i></a>
         </div>
@@ -23,7 +23,7 @@
         </li>
 
         <li class="sidebar-item ">
-          <a href="{{ route('admin.home')}}" class='sidebar-link'>
+          <a href="{{ route('admin.post.index')}}" class='sidebar-link'>
             <i class="bi bi-pen-fill"></i>
             <span>Manage Posts</span>
           </a>
