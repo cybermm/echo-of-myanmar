@@ -5,12 +5,17 @@ use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\PostController;
+// Public Routes
+use App\Http\Controllers\User\IndexController;
+use App\Http\Controllers\User\PublicPostController;
 
 Auth::routes();
 
 // Public UserRoute
-Route::get('/', function () {
-    return view('index');
+Route::group([], function () {
+    Route::get('/', [IndexController::class, 'index']);
+
+    Route::get('/posts', [PublicPostController::class, 'index'])->name('posts.index');
 });
 
 // Language Controller
@@ -35,9 +40,9 @@ Route::group(
         //  Profile Management
         Route::get('/profile/{profile}', [ProfileController::class, 'edit'])->name('profile.edit');
         Route::put('/profile/{profile}', [ProfileController::class, 'update'])->name('profile.update');
-        
+
         // Post Manager
-        
-        Route::resource('/post',PostController::class);
+
+        Route::resource('/post', PostController::class);
 
     });

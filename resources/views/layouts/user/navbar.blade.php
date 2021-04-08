@@ -36,7 +36,7 @@
           <a class="nav-link" href="#whatwedo">What We Do</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#news">News</a>
+          <a class="nav-link" href="{{ route('posts.index') }}">News</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>

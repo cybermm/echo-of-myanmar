@@ -28,11 +28,61 @@
         <div class="card">
           <div class="card-content">
             <div class="card-body">
-              <!-- Profile -->
+              <!-- Post Manager -->
               <section id="basic-vertical-layouts">
-                  Post Manager
+                      <div class="row" id="basic-table">
+      <div class="col-12 col-md-12">
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body">
+              <!-- Table with outer spacing -->
+              <div class="table-responsive">
+                <table id="post-table" class="table table-lg" >
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th colspan="2" class="text-center">Manage Post</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @forelse($posts as $post)
+                    <tr>
+                      <td class="text-bold-500">
+                        {{ $post->title}}
+                      </td>
+<td>
+    <a href="" class="btn btn-primary float-end">
+        Edit
+    </a>
+    </td>
+    <td>
+    <a href="" class="btn btn-danger" onclick="deletePostForm(this)" postid="{{$post->id}}">
+        Delete
+    </a>
+
+
+</td>
+
+
+                    </tr>
+                    @empty
+                    <tr>
+                      <td colspan="4" class="text-center">
+                        Posts Not Found
+                      </td>
+                    </tr>
+                    @endforelse
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
             </section>
-            <!-- Profile End -->
+            <!-- Post Manager End -->
           </div>
         </div>
       </div>
@@ -42,12 +92,36 @@
 
 </div>
 
+
 @endsection
+
 @push('script')
 <script>
 // Simple Datatable
-let role_table = document.querySelector('#role-table');
-let dataTable = new simpleDatatables.DataTable(role_table);
+let post_table = document.querySelector('#post-table');
+let dataTable = new simpleDatatables.DataTable(post_table);
+
+function deletePostForm(e){
+event.preventDefault();
+let post_id = e.getAttribute('postid')
+axios.delete(`/admin/post/${post_id}`)
+.then(res => {
+    if(res.data === ""){
+        location.href = "/admin/post";
+        // Show toast if post deleting is success
+    Toastify({
+      text: "Post deleted successfully!",
+      duration: 3000,
+      gravity:"top",
+      position: "center",
+    }).showToast();
+
+    }
+    console.log(res)
+})
+//document.querySelector('#delete-post-form').submit();
+}
 </script>
 
 @endpush
+

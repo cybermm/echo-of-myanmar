@@ -15,8 +15,8 @@ class PostController extends Controller
     * @return \Illuminate\Http\Response
     */
     public function index() {
-        
-        return view('admin.post.index');
+        $posts = Post::all();
+        return view('admin.post.index', compact('posts'));
 
     }
 
@@ -27,7 +27,7 @@ class PostController extends Controller
     */
     public function create() {
         $posts = Post::all();
-        return view('admin.post.create',compact('posts'));
+        return view('admin.post.create', compact('posts'));
     }
 
     /**
@@ -49,14 +49,14 @@ class PostController extends Controller
 
         Post::create([
             'title' => [
-                "en" => $request->title,
-                "mmr" => '',
+                "en" => $request->title_en,
+                "mmr" => $request->title_mmr,
             ],
             'image' => $file_name,
             'content' =>
             [
-                "en" => $request->content,
-                "mmr" => ''
+                "en" => $request->content_en,
+                "mmr" => $request->content_mmr
             ]
         ]);
 
@@ -100,7 +100,8 @@ class PostController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function destroy($id) {
-        //
+    public function destroy(Post $post) {
+        $post->delete();
+        exit;
     }
 }

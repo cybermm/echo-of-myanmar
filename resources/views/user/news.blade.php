@@ -17,18 +17,22 @@
             <input type="text" placeholder="Find News..." class="form-control">
           </div>
           <div class="row">
+              @foreach($posts as $post)
             <div class="col-12 col-lg-6 col-xl-4 mt-4">
               <div class="card">
                 <img
-                src="./src/img/news1.jpg"
+                src="{{
+                asset('/imgs/post_image/'.$post->image)
+                }}"
                 class="card-img-top"
                 alt="news-image"
                 />
                 <div class="card-body">
-                  <h4 class="card-title text-danger">Title</h4>
+                  <h4 class="card-title text-danger">
+                  {{ $post->title}}</h4>
                   <p class="card-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Sunt alias qui....
+                                              {!! substr($post->content,0,100)."..."
+                          !!}
                   </p>
                   <a href="#" class="btn btn-info btn-sm"
                     >Read More <i class="fas fa-arrow-right"></i
@@ -36,101 +40,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6 col-xl-4 mt-4">
-              <div class="card">
-                <img
-                src="./src/img/news1.jpg"
-                class="card-img-top"
-                alt="news-image"
-                />
-                <div class="card-body">
-                  <h4 class="card-title text-danger">Title</h4>
-                  <p class="card-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Sunt alias qui....
-                  </p>
-                  <a href="#" class="btn btn-info btn-sm"
-                    >Read More <i class="fas fa-arrow-right"></i
-                    ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6 col-xl-4 mt-4">
-              <div class="card">
-                <img
-                src="./src/img/news1.jpg"
-                class="card-img-top"
-                alt="news-image"
-                />
-                <div class="card-body">
-                  <h4 class="card-title text-danger">Title</h4>
-                  <p class="card-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Sunt alias qui....
-                  </p>
-                  <a href="#" class="btn btn-info btn-sm"
-                    >Read More <i class="fas fa-arrow-right"></i
-                    ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6 col-xl-4 mt-4">
-              <div class="card">
-                <img
-                src="./src/img/news1.jpg"
-                class="card-img-top"
-                alt="news-image"
-                />
-                <div class="card-body">
-                  <h4 class="card-title text-danger">Title</h4>
-                  <p class="card-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Sunt alias qui....
-                  </p>
-                  <a href="#" class="btn btn-info btn-sm"
-                    >Read More <i class="fas fa-arrow-right"></i
-                    ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6 col-xl-4 mt-4">
-              <div class="card">
-                <img
-                src="./src/img/news1.jpg"
-                class="card-img-top"
-                alt="news-image"
-                />
-                <div class="card-body">
-                  <h4 class="card-title text-danger">Title</h4>
-                  <p class="card-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Sunt alias qui....
-                  </p>
-                  <a href="#" class="btn btn-info btn-sm"
-                    >Read More <i class="fas fa-arrow-right"></i
-                    ></a>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-lg-6 col-xl-4 mt-4">
-              <div class="card">
-                <img
-                src="./src/img/news1.jpg"
-                class="card-img-top"
-                alt="news-image"
-                />
-                <div class="card-body">
-                  <h4 class="card-title text-danger">Title</h4>
-                  <p class="card-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Sunt alias qui....
-                  </p>
-                  <a href="#" class="btn btn-info btn-sm"
-                    >Read More <i class="fas fa-arrow-right"></i
-                    ></a>
-                </div>
-              </div>
-            </div>
+            @endforeach
+            
           </div>
 
           <div class="col-12 text-center mt-4">
