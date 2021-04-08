@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="{{ asset('admin/vendors/simple-datatables/style.css') }}">
   <!-- Toastify -->
   <link rel="stylesheet" href="{{ asset('admin/vendors/toastify/toastify.css') }}">
+  <!-- Custom Style -->
+  @stack('style')
 
   <!-- Eruda JS -->
   <script src="{{ asset('js/eruda.js')}}"></script>
