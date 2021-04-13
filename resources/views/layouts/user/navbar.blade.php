@@ -27,19 +27,19 @@
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="/#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#gallery">Gallery</a>
+          <a class="nav-link" href="/#gallery">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#whatwedo">What We Do</a>
+          <a class="nav-link" href="/#whatwedo">What We Do</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('posts.index') }}">News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="/#contact">Contact</a>
         </li>
       </ul>
       <form class="d-flex">

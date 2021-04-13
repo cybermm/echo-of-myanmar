@@ -184,7 +184,7 @@
                                     {!! substr($post->content,0,100)."..."
                                     !!}
                                 </p>
-                                <a href="{{route('views.update')}}" class="btn btn-info btn-sm"
+                                <a href="" class="btn btn-info btn-sm"
                                     >Read More <i class="fas fa-arrow-right"></i
                                     ></a>
                             </div>
@@ -195,7 +195,7 @@
                 </div>
 
                 <div class="col-12 text-center mt-4">
-                    <a href="" class="btn btn-danger rounded-pill">See More News</a>
+                    <a href="{{route('posts.index')}}" class="btn btn-danger rounded-pill">See More News</a>
                 </div>
             </div>
         </div>

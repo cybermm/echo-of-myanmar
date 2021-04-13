@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostCreateRequest;
+use Illuminate\Support\Str;
 use App\Models\Post;
 
 class PostController extends Controller
@@ -40,14 +41,19 @@ class PostController extends Controller
 
         // File Process
         $file = $request->file('image');
-
         // Generate Custom Unique File Name
         $file_name = 'ECHO_OF_MYANMAR'.'_'.uniqId().'_'.$file->getClientOriginalName();
 
-        // Move admin face images
-        $file->move(public_path().'/imgs/post_image/', $file_name);
+        if ($file->getClientOriginalName() !== null) {
+            // Move post images
+            $file->move(public_path().'/imgs/post_image/', $file_name);
+        }
+
+        // Create Unique  Slug
+        $slug = strtolower(Str::slug($request->title_en, '-'))."-".date("d-m-Y")."-".uniqid() ?? strtolower(Str::slug($request->title_mmr, '-'))."-".date("d-m-Y")."-".uniqid();
 
         Post::create([
+            'slug' => $slug,
             'title' => [
                 "en" => $request->title_en,
                 "mmr" => $request->title_mmr,
@@ -61,6 +67,7 @@ class PostController extends Controller
         ]);
 
         return redirect()->route('admin.home')->with('status', 'You have been posted successfully!');
+
     }
 
     /**
@@ -79,8 +86,9 @@ class PostController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function edit($id) {
-        //
+    public function edit($slug) {
+        $post = Post::where('slug', $slug)->firstOrFail();
+        return view('admin.post.edit', compact('post'));
     }
 
     /**
@@ -90,8 +98,47 @@ class PostController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function update(Request $request, $id) {
-        //
+    public function update(Request $request, $slug) {
+
+        // Manage Old Image
+        $post = Post::where('slug', $slug)->firstOrFail();
+        $old_image_name = $post->image;
+
+        // File Process
+        $file = $request->file('image');
+        if ($file) {
+            // Remove old image
+
+            unlink(public_path()."/imgs/post_image/$old_image_name");
+
+            // Generate Custom Unique File Name
+            $file_name = 'ECHO_OF_MYANMAR'.'_'.uniqId().'_'.$file->getClientOriginalName();
+
+            // Move post images
+            $file->move(public_path().'/imgs/post_image/', $file_name);
+
+
+        }
+
+        // Create Unique  Slug
+        $uniq_slug = strtolower(Str::slug($request->title_en, '-'))."-".date("d-m-Y")."-".uniqid() ?? strtolower(Str::slug($request->title_mmr, '-'))."-".date("d-m-Y")."-".uniqid();
+
+        Post::where('slug', $slug)->firstOrFail()->update([
+            'slug' => $uniq_slug,
+            'title' => [
+                "en" => $request->title_en,
+                "mmr" => $request->title_mmr,
+            ],
+            'image' => $file_name ?? $old_image_name,
+            'content' =>
+            [
+                "en" => $request->content_en,
+                "mmr" => $request->content_mmr
+            ]
+        ]);
+
+        return redirect()->route('admin.post.index')->with('status', 'You have been posted successfully!');
+
     }
 
     /**
@@ -101,7 +148,10 @@ class PostController extends Controller
     * @return \Illuminate\Http\Response
     */
     public function destroy(Post $post) {
-        $post->delete();
+        $old_image_name = $post->image;
+        // Delete Image
+
+        unlink(public_path()."/imgs/post_image/$old_image_name"); $post->delete() ?? abort(404);
         exit;
     }
 }

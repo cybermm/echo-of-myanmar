@@ -1,6 +1,8 @@
 @extends('layouts.admin.app')
 @section('content')
-<!-- Create Post -->
+@push('style')
+@endpush
+<!-- Edit Post -->
 <div class="page-heading">
     <div class="page-title">
         <div class="row">
@@ -9,14 +11,14 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('admin.home')}}">Dashboard</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Manage Post</li>
-                        <li class="breadcrumb-item active" aria-current="page">Create Post</li>
+                        <li class="breadcrumb-item active" aria-current="page">Edit Post</li>
                     </ol>
                 </nav>
             </div>
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Create Post</h3>
+                <h3>Edit Post</h3>
                 <p class="text-subtitle text-muted">
-                    Create New Post
+                    To edit post.
                 </p>
             </div>
         </div>
@@ -30,9 +32,9 @@
                         <div class="card-body">
                             <!-- Post -->
                             <section id="basic-vertical-layouts">
-                                <!-- Post Create Form -->       <form action="{{route('admin.post.store')}}" method="post" enctype="multipart/form-data">
+                                <!-- Post Edit Form -->       <form action="{{route('admin.post.update',$post->slug)}}" method="post" enctype="multipart/form-data">
                                     @csrf
-                                    <button type="submit" class="btn btn-primary my-3 float-end">
+                                    @method('PUT')          <button type="submit" class="btn btn-primary my-3 float-end">
                                         Post
                                     </button>
                                     <!-- Error -->          @if($errors)
@@ -44,10 +46,10 @@
                                     <!-- Language Dropdown -->
                                     <div class="btn-group mb-3" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-outline-primary"
-                       id="btn-en"                 >English</button>
+                                            id="btn-en">English</button>
                                         <button type="button" class="btn btn-outline-danger"
-                                       id="btn-mmr" 
-                                        >
+                                            id="btn-mmr"
+                                            >
                                             မြန်မာ
                                         </button>
                                     </div>
@@ -79,9 +81,8 @@
                                         <div class="form-group has-icon-left">
                                             <label for="first-name-icon my-2">Featured Title</label>
                                             <div class="position-relative">
-                                                <input type="text" class="form-control @error('title') is-invalid @enderror"
+                                                <input type="text" value="{{ $post->getTranslation('title','en') }}" class="form-control @error('title') is-invalid @enderror"
                                                 name="title_en" placeholder="Featured Post Title"
-                                                value=""
                                                 id="first-name-icon">
 
                                                 <div class="form-control-icon">
@@ -91,7 +92,9 @@
                                         </div>
                                     </div>
 
-                                    <textarea name="content_en" id="editor_en" cols="100" placeholder="Post Content ..."></textarea>
+                                    <textarea name="content_en" id="editor_en" cols="100" placeholder="Post Content ...">
+                                        {!! $post->getTranslation('content','en') !!}
+                                    </textarea>
                                 </div>
 
                                 <!-- English Language UI End  -->
@@ -102,9 +105,10 @@
                                         <div class="form-group has-icon-left">
                                             <label for="first-name-icon my-2">Featured Title(MM)</label>
                                             <div class="position-relative">
-                                                <input type="text" class="form-control @error('title') is-invalid @enderror"
+                                                <input type="text"
+                                                value="{{ $post->getTranslation('title','mmr') }}" class="form-control @error('title') is-invalid @enderror"
                                                 name="title_mmr" placeholder="Featured Post Title (Myanmar)"
-                                                value=""
+
                                                 id="first-name-icon">
 
                                                 <div class="form-control-icon">
@@ -114,7 +118,9 @@
                                         </div>
                                     </div>
 
-                                    <textarea name="content_mmr" id="editor_mmr" cols="100" placeholder="Post Content (Myanmar)"></textarea>
+                                    <textarea name="content_mmr" id="editor_mmr" cols="100" placeholder="Post Content (Myanmar)">                 {!! $post->getTranslation('content','mmr') !!}
+
+                                    </textarea>
                                 </div>
 
                                 <!-- Myanmar Language UI End  -->
@@ -156,14 +162,14 @@ let form_en = document.querySelector('#form-en');
 let form_mmr = document.querySelector('#form-mmr');
 
 // toggle english form
-btn_en.addEventListener('click',()=>{
-    form_mmr.classList.toggle('d-none');
+btn_en.addEventListener('click', ()=> {
+form_mmr.classList.toggle('d-none');
 form_en.classList.toggle('d-none');
 });
 
 // toggle Myanmar form
-btn_mmr.addEventListener('click',()=>{
-     form_mmr.classList.toggle('d-none');
+btn_mmr.addEventListener('click', ()=> {
+form_mmr.classList.toggle('d-none');
 form_en.classList.toggle('d-none');
 });
 
