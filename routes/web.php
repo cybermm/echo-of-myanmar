@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\PostController;
 // Public Routes
 use App\Http\Controllers\User\IndexController;
 use App\Http\Controllers\User\PublicPostController;
+// Viewers
+use App\Http\Controllers\ViewerController;
 
 Auth::routes();
 
@@ -16,6 +18,8 @@ Route::group([], function () {
     Route::get('/', [IndexController::class, 'index']);
 
     Route::get('/posts', [PublicPostController::class, 'index'])->name('posts.index');
+    
+    Route::get('/update-views', [ViewerController::class, 'update'])->name('views.update');
 });
 
 // Language Controller
