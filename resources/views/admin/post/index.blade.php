@@ -1,6 +1,6 @@
 @extends('layouts.admin.app')
 @section('content')
-<!-- Manage Role -->
+<!-- Manage Post -->
 
 <div class="page-heading">
     <div class="page-title">
@@ -42,7 +42,7 @@
                                                                 <tr>
                                                                     <th>Title</th>
                                                                     <th>Image</th>
-                                                                    <th colspan="2" class="text-center">Manage Post</th>
+                                                                    <th colspan="3" class="text-center">Manage Post</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -51,9 +51,14 @@
                                                                     <td class="text-bold-500">
                                                                         {{ $post->title}}
                                                                     </td>
-                        <td>
-                            <img src="{{asset('/imgs/post_image/'.$post->image )}}" alt="Image Not Found" width="100" height="100">
-                        </td>                                          <td>
+                                                                    <td>
+                                                                        <img src="{{asset('/imgs/post_image/'.$post->image )}}" alt="Image Not Found" width="100" height="100">
+                                                                    </td>                        <td>
+                                                                                 <a href="{{route('posts.show',$post->slug)}}" class="btn btn-info float-end">
+                                                                        View Post
+                                                                        </a>
+
+                                                                    </td>                  <td>
                                                                         <a href="{{route('admin.post.edit',$post->slug)}}" class="btn btn-primary float-end">
                                                                             Edit
                                                                         </a>

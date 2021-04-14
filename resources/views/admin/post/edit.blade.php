@@ -81,7 +81,7 @@
                                         <div class="form-group has-icon-left">
                                             <label for="first-name-icon my-2">Featured Title</label>
                                             <div class="position-relative">
-                                                <input type="text" value="{{ $post->getTranslation('title','en') }}" class="form-control @error('title') is-invalid @enderror"
+                                                <input type="text" value="{{ $post->getTranslation('title','en') }}" class="form-control @error('title_en') is-invalid @enderror"
                                                 name="title_en" placeholder="Featured Post Title"
                                                 id="first-name-icon">
 

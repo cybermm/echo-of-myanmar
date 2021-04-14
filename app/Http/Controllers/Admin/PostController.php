@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostCreateRequest;
+use App\Http\Requests\PostEditRequest;
 use Illuminate\Support\Str;
 use App\Models\Post;
 
@@ -98,7 +99,7 @@ class PostController extends Controller
     * @param  int  $id
     * @return \Illuminate\Http\Response
     */
-    public function update(Request $request, $slug) {
+    public function update(PostEditRequest $request, $slug) {
 
         // Manage Old Image
         $post = Post::where('slug', $slug)->firstOrFail();

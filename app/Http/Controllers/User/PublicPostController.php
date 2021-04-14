@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\TotalView;
 
 class PublicPostController extends Controller
 {
@@ -44,7 +45,27 @@ class PublicPostController extends Controller
     * @return \Illuminate\Http\Response
     */
     public function show($slug) {
+
         $post = Post::where('slug', $slug)->firstOrFail();
+        $post_id = $post->id;
+
+        $result = TotalView::where('post_id', $post_id)->first();
+
+        if ($result === null) {
+            // Create Post Count Row if not exist
+            TotalView::create([
+                'post_id' => $post_id,
+                'view_count' => 1
+            ]);
+        } else {
+            // Update post count views
+            $totalViews = TotalView::where('post_id', $post_id)->firstOrFail();
+            $view_counts = $totalViews->view_count + 1;
+            $totalViews->view_count = $view_counts;
+            $totalViews->save();
+
+        }
+
         return view('user.post', compact('post'));
     }
 

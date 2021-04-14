@@ -28,13 +28,20 @@
                             alt="news-image"
                             />
                             <div class="card-body">
-                                <h4 class="card-title text-danger">
-                                    {{ $post->title}}</h4>
+                                   <h4 class="card-title text-danger">
+
+                                              {{ $post->title}}
+
+                     </h4>
                                 <p class="card-text">
                                     {!! substr($post->content,0,100)."..."
                                     !!}
                                 </p>
-                                <a href="{{route('posts.show',$post->slug)}}" class="btn btn-info btn-sm"
+                                <!-- {{route('posts.show',$post->slug)}} -->
+                                <a href="{{route('posts.show',$post->slug)}} " class="btn btn-info btn-sm"
+                                    id="read-post"
+                                    onclick="updateTotalView(this)"
+                                    postslug="{{$post->slug}}"
                                     >Read More <i class="fas fa-arrow-right"></i
                                     ></a>
                             </div>

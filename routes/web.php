@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\PostController;
 // Public Routes
 use App\Http\Controllers\User\IndexController;
 use App\Http\Controllers\User\PublicPostController;
+use App\Http\Controllers\User\TotalViewController;
 
 Auth::routes();
 
@@ -17,6 +18,8 @@ Route::group([], function () {
 
     Route::get('/posts', [PublicPostController::class, 'index'])->name('posts.index');
     Route::get('/posts/{slug}', [PublicPostController::class, 'show'])->name('posts.show');
+    
+    Route::post('/total-view/{slug}', [TotalViewController::class, 'store']);
 
 });
 
