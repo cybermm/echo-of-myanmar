@@ -12,20 +12,21 @@ use App\Http\Controllers\User\TotalViewController;
 
 Auth::routes();
 
+// Language Controller
+Route::get('/{locale}', [LocaleController::class, 'setLocale'])->name('locale');
+
+
+
 // Public UserRoute
 Route::group([], function () {
     Route::get('/', [IndexController::class, 'index']);
 
     Route::get('/posts', [PublicPostController::class, 'index'])->name('posts.index');
     Route::get('/posts/{slug}', [PublicPostController::class, 'show'])->name('posts.show');
-    
+
     Route::post('/total-view/{slug}', [TotalViewController::class, 'store']);
 
 });
-
-// Language Controller
-Route::get('/{locale}', [LocaleController::class, 'setLocale'])->name('locale');
-
 
 // Admin Route Group
 Route::group(

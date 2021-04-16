@@ -35,10 +35,9 @@
                                     <button type="submit" class="btn btn-primary my-3 float-end">
                                         Post
                                     </button>
-                                    <!-- Error -->          @if($errors)
-                                    @foreach($errors->all() as $error)
-                                    {{$error}}
-                                    @endforeach
+                   <!-- Error -->          @if($errors)
+               
+                {{$errors->first('title_en') }}
                                     @endif
                                     <div class="clearfix"></div>
                                     <!-- Language Dropdown -->
