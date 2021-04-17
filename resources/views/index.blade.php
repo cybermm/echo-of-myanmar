@@ -165,7 +165,7 @@
                 </div>
                 <div class="row">
                     <!--  News Card for Home Page -->
-                    @foreach($posts as $post)
+                    @forelse($posts as $post)
 
                     <div class="col-12 col-lg-6 col-xl-4 mt-4">
                         <div class="card">
@@ -184,14 +184,15 @@
                                     {!! substr($post->content,0,100)."..."
                                     !!}
                                 </p>
-                                <a href="" class="btn btn-info btn-sm"
+                                <a href="{{route('posts.show',$post->slug)}}" class="btn btn-info btn-sm"
                                     >Read More <i class="fas fa-arrow-right"></i
                                     ></a>
                             </div>
                         </div>
                     </div>
-                    @endforeach
-
+                     @empty
+                    <p class="text-light text-muted text-center my-5">There is no post for now.Please try again later.</p>
+                    @endforelse
                 </div>
 
                 <div class="col-12 text-center mt-4">

@@ -121,11 +121,9 @@ class PostController extends Controller
 
         }
 
-        // Create Unique  Slug
-        $uniq_slug = strtolower(Str::slug($request->title_en, '-'))."-".date("d-m-Y")."-".uniqid() ?? strtolower(Str::slug($request->title_mmr, '-'))."-".date("d-m-Y")."-".uniqid();
 
         Post::where('slug', $slug)->firstOrFail()->update([
-            'slug' => $uniq_slug,
+            'slug' => $post->slug,
             'title' => [
                 "en" => $request->title_en,
                 "mmr" => $request->title_mmr,

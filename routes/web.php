@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\User\IndexController;
 use App\Http\Controllers\User\PublicPostController;
 use App\Http\Controllers\User\TotalViewController;
+use App\Http\Controllers\User\SearchController;
 
 Auth::routes();
 
@@ -16,17 +17,20 @@ Auth::routes();
 Route::get('/{locale}', [LocaleController::class, 'setLocale'])->name('locale');
 
 
-
 // Public UserRoute
-Route::group([], function () {
-    Route::get('/', [IndexController::class, 'index']);
+Route::get('/', [IndexController::class, 'index']);
+
+Route::group(['prefix' => 'user'], function() {
 
     Route::get('/posts', [PublicPostController::class, 'index'])->name('posts.index');
     Route::get('/posts/{slug}', [PublicPostController::class, 'show'])->name('posts.show');
 
     Route::post('/total-view/{slug}', [TotalViewController::class, 'store']);
+    
+    Route::post('/search',[SearchController::class,'search'])->name('search');
 
 });
+
 
 // Admin Route Group
 Route::group(
@@ -50,5 +54,6 @@ Route::group(
         // Post Manager
 
         Route::resource('/post', PostController::class);
+
 
     });

@@ -37,11 +37,7 @@
                                     @method('PUT')          <button type="submit" class="btn btn-primary my-3 float-end">
                                         Post
                                     </button>
-                                    <!-- Error -->          @if($errors)
-                                    @foreach($errors->all() as $error)
-                                    {{$error}}
-                                    @endforeach
-                                    @endif
+                            
                                     <div class="clearfix"></div>
                                     <!-- Language Dropdown -->
                                     <div class="btn-group mb-3" role="group" aria-label="Basic example">
@@ -56,7 +52,11 @@
 
                                     <!-- Language Dropdown End -->
 
-                                    <!-- File Upload -->
+<div class="clearfix"></div>
+
+<div class="row d-flex justify-content-center">
+<img src="{{asset('imgs/post_image/'.$post->image)}}" alt="Post Image" class="img-fluid" style="border-radius:20px;">
+       </div>                             <!-- File Upload -->
                                     <div class="col-md-12 mb-3 form-group">
                                         <label class="my-2">Upload Featured Image</label>
                                         <div class="input-group mb-3">
@@ -72,7 +72,10 @@
                                         </div>
 
                                     </fieldset>
-                                </div>
+                                                                                                           <div class="text-danger">
+                {{ $errors->first('image') }}
+            </div>      
+      </div>
 
 
                                 <!-- English Language UI -->
@@ -83,13 +86,18 @@
                                             <div class="position-relative">
                                                 <input type="text" value="{{ $post->getTranslation('title','en') }}" class="form-control @error('title_en') is-invalid @enderror"
                                                 name="title_en" placeholder="Featured Post Title"
-                                                id="first-name-icon">
+                                                id="first-name-icon"
+                                     autocomplete="off"           
+                                                >
 
                                                 <div class="form-control-icon">
                                                     <i class="bi bi-chat-quote-fill"></i>
                                                 </div>
                                             </div>
-                                        </div>
+                                                                                                             <div class="text-danger">
+                {{ $errors->first('title_en') }}
+            </div>      
+            </div>
                                     </div>
 
                                     <textarea name="content_en" id="editor_en" cols="100" placeholder="Post Content ...">
@@ -109,7 +117,9 @@
                                                 value="{{ $post->getTranslation('title','mmr') }}" class="form-control @error('title') is-invalid @enderror"
                                                 name="title_mmr" placeholder="Featured Post Title (Myanmar)"
 
-                                                id="first-name-icon">
+                                                id="first-name-icon"
+                     autocomplete="off"                           
+                                                >
 
                                                 <div class="form-control-icon">
                                                     <i class="bi bi-chat-quote-fill"></i>

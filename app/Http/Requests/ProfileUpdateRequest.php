@@ -26,7 +26,8 @@ class ProfileUpdateRequest extends FormRequest
         return [
             'name'=>'required|min:3',
             'email'=>'required|email',
-            'password'=>'nullable|min:8|confirmed'
+            'password'=>'nullable|min:8|confirmed',
+            'profile_image'=>'nullable|mimes:jpg,png,jpeg'
         ];
     }
 }

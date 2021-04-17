@@ -31,11 +31,13 @@
                             alt="news-image"
                             />
                             <div class="card-body">
-               <div class="d-flex justify-content-end">
+                           
+                                          <div class="d-flex justify-content-end">
                    <i class="fa fa-clock me-2"></i>
                    {{ $post->updated_at->diffForHumans() }}
-               </div>           
-               <h4 class="card-title text-danger">
+               </div>      
+               
+     <h4 class="card-title text-danger">
 
                                     {{ $post->title}}
 
@@ -52,8 +54,8 @@
                         </div>
                     </div>
                     @empty
-                    <p class="text-light text-muted text-center my-5">
-                        There is no post for now.Please try again later.
+                    <p class="text-light text-muted text-center my-5 display-6 ">
+                Posts Not Found That You Searched
                     </p>
                     @endforelse
 

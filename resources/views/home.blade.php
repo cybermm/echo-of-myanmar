@@ -169,24 +169,21 @@
 @push('script')
 <script>
 
-    var total_posts_percentage = Math.floor(Number("{{$posts->count()}}")/100);
+    var total_posts_percentage = Number("{{$posts->count()}}"/100);
     
     var total_registered_users_percentage = Number("{{$registered_users}}"/100);
-    var total_admins_percentage = Number("{{$users->count()}}"/100);
     var total_post_views_percentage = Number("{{$views}}"/100);
 
 
     let optionsVisitorsProfile = {
         series: [total_posts_percentage,
-            total_admins_percentage,
             total_post_views_percentage,
             total_registered_users_percentage],
         labels: ['Posts',
-            'Admins',
             'Post Views',
             'Registered Users'],
         colors: ['#435ebe',
-            '#55c6e8',
+        
             '#ff8800',
             '#ddd'],
         chart: {

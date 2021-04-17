@@ -23,10 +23,10 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => 'Aung Myat Moe',
-            'email' => 'amm@gmail.com',
+            'name' => 'Echo Of Myanmar',
+            'email' => 'echoofmmorg@gmail.com',
             'email_verified_at' => now(),
-            'password' => bcrypt(123123123),
+            'password' => bcrypt('echoofmyanmar55555'),
             'role'=>'admin',
             'image'=>'default.jpg',
             'remember_token' => Str::random(10),

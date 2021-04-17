@@ -35,18 +35,14 @@
                                     <button type="submit" class="btn btn-primary my-3 float-end">
                                         Post
                                     </button>
-                   <!-- Error -->          @if($errors)
-               
-                {{$errors->first('title_en') }}
-                                    @endif
                                     <div class="clearfix"></div>
                                     <!-- Language Dropdown -->
                                     <div class="btn-group mb-3" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-outline-primary"
-                       id="btn-en"                 >English</button>
+                                            id="btn-en">English</button>
                                         <button type="button" class="btn btn-outline-danger"
-                                       id="btn-mmr" 
-                                        >
+                                            id="btn-mmr"
+                                            >
                                             မြန်မာ
                                         </button>
                                     </div>
@@ -65,6 +61,10 @@
                                                 @error('image') is-invalid @enderror                         " id="inputGroupFile01"
                                                 name="image"
                                                 accept="image/*">
+
+                                                <div class="text-danger">
+                                                    {{ $errors->first('image') }}
+                                                </div>
                                             </div>
                                         </div>
 
@@ -86,6 +86,9 @@
                                                 <div class="form-control-icon">
                                                     <i class="bi bi-chat-quote-fill"></i>
                                                 </div>
+                                            </div>
+                                            <div class="text-danger">
+                                                {{ $errors->first('title_en') }}
                                             </div>
                                         </div>
                                     </div>
@@ -155,14 +158,14 @@ let form_en = document.querySelector('#form-en');
 let form_mmr = document.querySelector('#form-mmr');
 
 // toggle english form
-btn_en.addEventListener('click',()=>{
-    form_mmr.classList.toggle('d-none');
+btn_en.addEventListener('click', ()=> {
+form_mmr.classList.toggle('d-none');
 form_en.classList.toggle('d-none');
 });
 
 // toggle Myanmar form
-btn_mmr.addEventListener('click',()=>{
-     form_mmr.classList.toggle('d-none');
+btn_mmr.addEventListener('click', ()=> {
+form_mmr.classList.toggle('d-none');
 form_en.classList.toggle('d-none');
 });
 
