@@ -13,7 +13,7 @@ use App\Http\Controllers\User\SearchController;
 
 Auth::routes();
 
-// Language Controller
+// Language Controller 
 Route::get('/{locale}', [LocaleController::class, 'setLocale'])->name('locale');
 
 
