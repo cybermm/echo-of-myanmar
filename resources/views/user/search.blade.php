@@ -14,7 +14,7 @@
         <div class="row align-items-center">
             <div class="col-12">
                 <div class="col-12 col-md-10 text-center mb-2 offset-md-1">
-                    <form action="{{route('search')}}" method="post">
+                    <form action="{{route('search')}}" method="get">
                         @csrf
                         <input type="search" placeholder="Find News..." class="form-control" name="search" autocomplete="off">
                     </form>
@@ -33,7 +33,7 @@
                             <div class="card-body">
                            
                                           <div class="d-flex justify-content-end">
-                   <i class="fa fa-clock me-2"></i>
+                   <i class="fa fa-clock mt-1 me-2"></i>
                    {{ $post->updated_at->diffForHumans() }}
                </div>      
                

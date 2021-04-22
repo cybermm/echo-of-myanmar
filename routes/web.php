@@ -27,7 +27,7 @@ Route::group(['prefix' => 'user'], function() {
 
     Route::post('/total-view/{slug}', [TotalViewController::class, 'store']);
     
-    Route::post('/search',[SearchController::class,'search'])->name('search');
+    Route::get('/search',[SearchController::class,'search'])->name('search');
 
 });
 

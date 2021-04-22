@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Echo Of Myanmar</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
+  <!--<link-->
+  <!--rel="stylesheet"-->
+  <!--href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"-->
+  <!--/>-->
 
   <!-- Core CSS -->
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/fa.css') }}">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ asset('css/staticapp.css') }}">
@@ -56,6 +57,7 @@
 
   <!-- Core Script -->
   <script src="{{ asset('js/app.js')}}"></script>
+  <script src="{{ asset('js/all.min.js')}}"></script>
   @stack('script')
 </body>
 </html>

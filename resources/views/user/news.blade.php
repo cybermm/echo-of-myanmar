@@ -32,7 +32,7 @@
                             />
                             <div class="card-body">
                <div class="d-flex justify-content-end">
-                   <i class="fa fa-clock me-2"></i>
+                   <i class="fa fa-clock mt-1 me-2"></i>
                    {{ $post->updated_at->diffForHumans() }}
                </div>           
                <h4 class="card-title text-danger">

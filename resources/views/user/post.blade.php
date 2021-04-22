@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12 mt-5">
                 <a href="{{ route('posts.index') }}" class="btn btn-info">
-                    <i class="fas fa-arrow-left"></i> Back
+                    <i class="fas fa-arrow-left me-1"></i> Back
                 </a>
             </div>
 
@@ -14,7 +14,7 @@
                     <img src="{{asset('/imgs/post_image/'.$post->image)}}" alt="" class="img-fluid">
                     <div class="card-body p-3 p-md-5">
                                        <div class="d-flex justify-content-end">
-                   <i class="fa fa-clock me-2"></i>
+                   <i class="fa fa-clock me-2 mt-1"></i>
                    {{ $post->updated_at->diffForHumans() }}
                </div>           
 
