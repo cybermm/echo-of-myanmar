@@ -17,29 +17,29 @@
                     <a href="{{route('posts.index')}}" class="btn btn-danger rounded-pill fw-bold">
                         @lang('home.view_news')
                     </a>
-                    <button class="btn btn-outline-white rounded-pill ms-3">
+                    <a href="#contact" class="btn btn-outline-white rounded-pill ms-3">
                         @lang('home.contact_us')
-                    </button>
+                    </a>
                 </div>
-                <div class="social-icons mb-5">
-                    <span id="fb-icon">
+                <div class="my-5">
+                    <a href="https://www.facebook.com/MyanmarsEcho/" class="icon">
                         <i class="fab fa-facebook-f"></i>
-                    </span>
+                    </a>
 
-                    <span id="twitter-icon">
+                    <a href="https://www.instagram.com/echo_of_myanmar/" class="icon">
 
                         <i class="fab fa-twitter" aria-hidden="true"></i>
 
-                    </span>
-                    <span id="instagram-icon">
+                    </a>
+                    <a href="https://twitter.com/myanmarsecho" class="icon">
                         <i class="fab fa-instagram" aria-hidden="true"></i>
-                    </span>
-                    <span id="telegram-icon">
+                    </a>
+                    <a href="https://t.me/echoofmyanmar" class="icon">
                         <i class="fab fa-telegram" aria-hidden="true"></i>
-                    </span>
-                    <span id="mail-icon">
+                    </a>
+                    <a href="mailto:echoofmmorg@gmail.com" class="icon">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -157,48 +157,49 @@
 
                 <div class="row my-3">
                     <div class="col-md-8 offset-md-2">
-                      <p class="my-2">
-                                        <i class="fa fa-phone-alt mx-2"></i>   
-                        Phone Numbers</p>
+                        <p class="my-2">
+                            <i class="fa fa-phone-alt mx-2"></i>
+                            Phone Numbers
+                        </p>
                         <ul class="list-group text-dark border">
                             <li class="list-group-item">
-                +959 973813330
+                                +959 973813330
 
                             </li>
                             <li class="list-group-item">
-              +959 758712805
+                                +959 758712805
                             </li>
                             <li class="list-group-item">
-       +959 446092800
+                                +959 446092800
                             </li>
                             <li class="list-group-item">
-      +959 781831313                      </li>
+                                +959 781831313                      </li>
                         </ul>
 
                     </div>
-                    
-                                    <div class="social-icons mb-5">
-                    <span id="fb-icon">
-                        <i class="fab fa-facebook-f"></i>
-                    </span>
 
-                    <span id="twitter-icon">
+                <div class="my-3">
+                    <a href="https://www.facebook.com/MyanmarsEcho/" class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/echo_of_myanmar/" class="icon">
 
                         <i class="fab fa-twitter" aria-hidden="true"></i>
 
-                    </span>
-                    <span id="instagram-icon">
+                    </a>
+                    <a href="https://twitter.com/myanmarsecho" class="icon">
                         <i class="fab fa-instagram" aria-hidden="true"></i>
-                    </span>
-                    <span id="telegram-icon">
+                    </a>
+                    <a href="https://t.me/echoofmyanmar" class="icon">
                         <i class="fab fa-telegram" aria-hidden="true"></i>
-                    </span>
-                    <span id="mail-icon">
+                    </a>
+                    <a href="mailto:echoofmmorg@gmail.com" class="icon">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </span>
+                    </a>
                 </div>
 
-                    
+
                 </div>
 
             </p>
@@ -250,10 +251,10 @@ alt="news-image"
 <h4 class="card-title text-danger">
 {{$post->title}}
 </h4>
-                                       <div class="d-flex justify-content-end">
-                   <i class="fa fa-clock me-2 mt-1"></i>
-                   {{ $post->updated_at->diffForHumans() }}
-               </div>          
+<div class="d-flex justify-content-end">
+<i class="fa fa-clock me-2 mt-1"></i>
+{{ $post->updated_at->diffForHumans() }}
+</div>
 <p class="card-text">
 {!! substr($post->content,0,100)."..."
 !!}
@@ -278,27 +279,4 @@ There is no post for now.Please try again later.
 </div>
 </div>
 </section>
-
-
 @endsection
-@push('script')
-<script>
-document.getElementById('fb-icon').addEventListener('click', ()=> {
-location.href = "https://www.facebook.com/MyanmarsEcho/";
-})
-
-document.getElementById('twitter-icon').addEventListener('click', ()=> {
-location.href = "https://twitter.com/myanmarsecho";
-})
-
-document.getElementById('instagram-icon').addEventListener('click', ()=> {
-location.href = "https://www.instagram.com/echo_of_myanmar/"
-})
-document.getElementById('telegram-icon').addEventListener('click', ()=> {
-location.href = "https://t.me/echoofmyanmar"
-})
-document.getElementById('mail-icon').addEventListener('click', ()=> {
-location.href = "mailto:echoofmmorg@gmail.com"
-})
-</script>
-@endpush

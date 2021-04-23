@@ -5,7 +5,7 @@
         <div
             class="row justify-content-center h-100 align-items-center text-center"
             >
-            <h4 class="mt-4">Home > News</h4>
+            <h4 class="mt-4">Home > Search</h4>
         </div>
     </div>
 </section>

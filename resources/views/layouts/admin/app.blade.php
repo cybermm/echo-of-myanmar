@@ -25,11 +25,12 @@
   <!-- Custom Style -->
   @stack('style')
 
-  <!-- Eruda JS -->
+  <!-- Console For Developement -->
   <script src="{{ asset('js/eruda.js')}}"></script>
   <script>
     eruda.init();
   </script>
+  
 </head>
 <body>
 

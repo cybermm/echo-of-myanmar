@@ -17,7 +17,7 @@ class PostController extends Controller
     * @return \Illuminate\Http\Response
     */
     public function index() {
-        $posts = Post::all();
+        $posts = Post::orderBy('id','desc')->get();
         return view('admin.post.index', compact('posts'));
 
     }
@@ -51,7 +51,7 @@ class PostController extends Controller
         }
 
         // Create Unique  Slug
-        $slug = strtolower(Str::slug($request->title_en, '-'))."-".date("d-m-Y")."-".uniqid() ?? strtolower(Str::slug($request->title_mmr, '-'))."-".date("d-m-Y")."-".uniqid();
+        $slug = uniqid();
 
         Post::create([
             'slug' => $slug,

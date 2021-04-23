@@ -3,7 +3,7 @@
           <div>
             <p>
               Developed by ❤️ with <a
-                href="http://facebook.com">Aung Myat Moe</a>
+                href="https://facebook.com/aungmyatmoe834">Aung Myat Moe</a>
             </p>
           </div>
         </div>

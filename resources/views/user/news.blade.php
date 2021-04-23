@@ -14,7 +14,7 @@
         <div class="row align-items-center">
             <div class="col-12">
                 <div class="col-12 col-md-10 text-center mb-2 offset-md-1">
-                    <form action="{{route('search')}}" method="post">
+                    <form action="{{route('search')}}" method="get">
                         @csrf
                         <input type="search" placeholder="Find News..." class="form-control" name="search" autocomplete="off">
                     </form>

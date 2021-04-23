@@ -92,8 +92,7 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <textarea name="content_en" id="editor_en" cols="100" placeholder="Post Content ..."></textarea>
+                            <textarea name="content_en" id="editor_en" cols="100" placeholder="Post Content ..."></textarea>
                                 </div>
 
                                 <!-- English Language UI End  -->

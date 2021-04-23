@@ -21,6 +21,13 @@
             <span>Dashboard</span>
           </a>
         </li>
+        
+        <li class="sidebar-item">
+          <a href="/" class='sidebar-link'>
+            <i class="bi bi-eye-fill"></i>
+            <span>View as User</span>
+          </a>
+        </li>
 
         <li class="sidebar-item ">
           <a href="{{ route('admin.post.index')}}" class='sidebar-link'>

@@ -25,7 +25,8 @@ class PostCreateRequest extends FormRequest
     {
         return [
             'image'=>'required|mimes:jpg,png,jpeg',
-            'title_en'=>'required'
+            'title_en'=>'required',
+            'content_en'=>'required'
         ];
     }
 }
