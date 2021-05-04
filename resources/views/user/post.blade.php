@@ -13,9 +13,16 @@
                 <div class="card">
                     <img src="{{asset('/imgs/post_image/'.$post->image)}}" alt="" class="img-fluid">
                     <div class="card-body p-3 p-md-5">
-                                       <div class="d-flex justify-content-end">
-                   <i class="fa fa-clock me-2 mt-1"></i>
+                                       <div class="d-flex justify-content-between my-3">
+<div>
+    <i class="fa fa-eye mx-1"></i>
+                       {{ $post->view->view_count}}
+
+</div>
+<div>
+                   <i class="fa fa-clock mx-1 mt-1"></i>
                    {{ $post->updated_at->diffForHumans() }}
+                   </div>
                </div>           
 
                         <h4 class="card-title text-danger">                                  {!! $post->title !!}</h4>

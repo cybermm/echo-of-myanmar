@@ -18,7 +18,7 @@ class Post extends Model
     ];
     public $translatable = ['title','content'];
     
-    public function totalView(){
-        return $this->belongTo(totalView::class);
+    public function view(){
+        return $this->hasOne(TotalView::class);
     }
 }

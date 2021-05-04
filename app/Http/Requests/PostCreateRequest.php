@@ -24,7 +24,7 @@ class PostCreateRequest extends FormRequest
     public function rules()
     {
         return [
-            'image'=>'required|mimes:jpg,png,jpeg',
+            'image'=>'required',
             'title_en'=>'required',
             'content_en'=>'required'
         ];

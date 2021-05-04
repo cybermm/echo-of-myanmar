@@ -22,7 +22,6 @@ class PostEditRequest extends FormRequest
     */
     public function rules() {
         return [
-            'image' => 'mimes:jpg,png,jpeg',
             'title_en'=>'required'
         ];
 

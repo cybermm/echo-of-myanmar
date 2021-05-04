@@ -42,6 +42,7 @@
                                                                 <tr>
                                                                     <th>Title</th>
                                                                     <th>Image</th>
+                                                                    <th>Total View</th>
                                                                     <th colspan="3" class="text-center">Manage Post</th>
                                                                 </tr>
                                                             </thead>
@@ -53,9 +54,14 @@
                                                                     </td>
                                                                     <td>
                                                                         <img src="{{asset('/imgs/post_image/'.$post->image )}}" alt="Image Not Found" width="100" height="100">
-                                                                    </td>                        <td>
-                                                                                 <a href="{{route('posts.show',$post->slug)}}" class="btn btn-info float-end">
-                                                                        View Post
+                                                                    </td>
+                         <td>
+                             <i class="bi bi-eye-fill me-1"></i>
+                             {{ $post->view->view_count ?? 0 }}
+                    
+                         </td>                                           <td>
+                                                                        <a href="{{route('posts.show',$post->slug)}}" class="btn btn-info float-end">
+                                                                            View Post
                                                                         </a>
 
                                                                     </td>                  <td>

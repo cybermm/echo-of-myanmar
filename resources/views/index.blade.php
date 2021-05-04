@@ -248,13 +248,20 @@ class="card-img-top"
 alt="news-image"
 />
 <div class="card-body">
+    <div class="d-flex justify-content-between my-3">
+    <div>
+        <i class="fa fa-eye mx-1"></i>
+        {{ $post->view->view_count  ?? 0}}
+    </div>
+    <div>
+        <i class="fa fa-clock mx-1"></i>
+{{ $post->updated_at->diffForHumans() }}
+    </div>
+</div>
+
 <h4 class="card-title text-danger">
 {{$post->title}}
 </h4>
-<div class="d-flex justify-content-end">
-<i class="fa fa-clock me-2 mt-1"></i>
-{{ $post->updated_at->diffForHumans() }}
-</div>
 <p class="card-text">
 {!! substr($post->content,0,100)."..."
 !!}

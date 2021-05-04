@@ -65,7 +65,6 @@ class PublicPostController extends Controller
             $totalViews->save();
 
         }
-
         return view('user.post', compact('post'));
     }
 
