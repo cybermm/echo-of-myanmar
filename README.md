@@ -13,3 +13,7 @@ cp .env.example .env # add database to .env
 php artisan migrate
 php artisan db:seed # seed for first user
 ```
+
+# Production Mode
+
+Open `.env` file and `APP_DEBUG=true` to `APP_DEBUG=false`.
