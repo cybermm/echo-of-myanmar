@@ -1,4 +1,7 @@
 
+# This project was archieved due to the stopping of EM orginization
+# Hey, you can use this project for any solution.
+
 # Echo Of Myanmar Backend Project
 
 [![Laravel](https://github.com/mmcyberyouth/EchoOfMyanmarBackend/actions/workflows/laravel.yml/badge.svg)](https://github.com/mmcyberyouth/EchoOfMyanmarBackend/actions/workflows/laravel.yml)
