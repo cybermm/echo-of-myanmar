@@ -2,9 +2,9 @@
 
 Please note that project is no longer under active development. This project was achieved due to the stopping of that organization. However, you can use this project for any solution.
 
-# Echo Of Myanmar Backend Project
+# Echo of Myanmar Backend Project
 
-- installation
+- Installation
   ```bash
     git clone https://github.com/cybermm/echo-of-myanmar-backend
     composer install
