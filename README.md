@@ -4,14 +4,13 @@ Please note that project is no longer under active development. This project was
 
 # Echo of Myanmar Backend Project
 
-- Installation
+### Installation
   ```bash
-    git clone https://github.com/cybermm/echo-of-myanmar-backend
+    git clone https://github.com/cybermm/echo-of-myanmar-backend echo-of-myanmar-backend
+    cd echo-of-myanmar-backend
     composer install
-    php artisan key:generate
-    cp .env.example .env # add database to .env
-    php artisan migrate
-    php artisan db:seed # seed for first user
+    composer setup // create database before setup
   ```
 
+### License
 Copyright (c) 2021 Myanmar Cyber Youth released under the <a href="./LICENSE">MIT</a> license.
