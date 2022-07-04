@@ -1,2 +1,2 @@
-require('./bootstrap');
-require('./staticapp');
+import './bootstrap';
+import './staticapp';
