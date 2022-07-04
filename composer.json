@@ -1,7 +1,7 @@
 {
-    "name": "cybermm/echo-of-myanmar-backend",
+    "name": "cybermm/echo-of-myanmar",
     "type": "project",
-    "description": "Backend of Echo of Myanmar.",
+    "description": "The source code of Echo of Myanmar.",
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
