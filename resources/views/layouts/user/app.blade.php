@@ -12,12 +12,10 @@
 
   <!-- Core CSS -->
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
- 
-  <!--<link rel="stylesheet" href="{{ asset('css/fa.css') }}">-->
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ asset('css/staticapp.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 
   <!-- Console For Developemnt -->
   <!--<script src="{{ asset('js/eruda.js')}}"></script>-->
